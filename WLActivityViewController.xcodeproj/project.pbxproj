@@ -10,47 +10,27 @@
 		C9ABAA4D1AB8B3B2006D278C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABAA4C1AB8B3B2006D278C /* main.m */; };
 		C9ABAA501AB8B3B2006D278C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABAA4F1AB8B3B2006D278C /* AppDelegate.m */; };
 		C9ABAA531AB8B3B2006D278C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABAA521AB8B3B2006D278C /* ViewController.m */; };
-		C9ABAA561AB8B3B2006D278C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9ABAA541AB8B3B2006D278C /* Main.storyboard */; };
 		C9ABAA581AB8B3B2006D278C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9ABAA571AB8B3B2006D278C /* Images.xcassets */; };
 		C9ABAA5B1AB8B3B2006D278C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9ABAA591AB8B3B2006D278C /* LaunchScreen.xib */; };
-		C9ABAA671AB8B3B2006D278C /* WLActivityViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABAA661AB8B3B2006D278C /* WLActivityViewControllerTests.m */; };
+		C9ABAA731AB8B3DC006D278C /* WLActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABAA721AB8B3DC006D278C /* WLActivityViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C9ABAA611AB8B3B2006D278C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9ABAA3F1AB8B3B2006D278C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9ABAA461AB8B3B2006D278C;
-			remoteInfo = WLActivityViewController;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C9ABAA471AB8B3B2006D278C /* WLActivityViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLActivityViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9ABAA4B1AB8B3B2006D278C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9ABAA4C1AB8B3B2006D278C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C9ABAA4E1AB8B3B2006D278C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C9ABAA4F1AB8B3B2006D278C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C9ABAA511AB8B3B2006D278C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C9ABAA521AB8B3B2006D278C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C9ABAA551AB8B3B2006D278C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C9ABAA571AB8B3B2006D278C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C9ABAA4B1AB8B3B2006D278C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Demo/Info.plist; sourceTree = "<group>"; };
+		C9ABAA4C1AB8B3B2006D278C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Demo/main.m; sourceTree = "<group>"; };
+		C9ABAA4E1AB8B3B2006D278C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Demo/AppDelegate.h; sourceTree = "<group>"; };
+		C9ABAA4F1AB8B3B2006D278C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../Demo/AppDelegate.m; sourceTree = "<group>"; };
+		C9ABAA511AB8B3B2006D278C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../Demo/ViewController.h; sourceTree = "<group>"; };
+		C9ABAA521AB8B3B2006D278C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../Demo/ViewController.m; sourceTree = "<group>"; };
+		C9ABAA571AB8B3B2006D278C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Demo/Images.xcassets; sourceTree = "<group>"; };
 		C9ABAA5A1AB8B3B2006D278C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C9ABAA601AB8B3B2006D278C /* WLActivityViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WLActivityViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9ABAA651AB8B3B2006D278C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9ABAA661AB8B3B2006D278C /* WLActivityViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLActivityViewControllerTests.m; sourceTree = "<group>"; };
+		C9ABAA711AB8B3DC006D278C /* WLActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLActivityViewController.h; sourceTree = "<group>"; };
+		C9ABAA721AB8B3DC006D278C /* WLActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLActivityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C9ABAA441AB8B3B2006D278C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9ABAA5D1AB8B3B2006D278C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,7 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				C9ABAA491AB8B3B2006D278C /* WLActivityViewController */,
-				C9ABAA631AB8B3B2006D278C /* WLActivityViewControllerTests */,
+				C9ABAA701AB8B3BC006D278C /* Demo */,
 				C9ABAA481AB8B3B2006D278C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				C9ABAA471AB8B3B2006D278C /* WLActivityViewController.app */,
-				C9ABAA601AB8B3B2006D278C /* WLActivityViewControllerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,14 +60,8 @@
 		C9ABAA491AB8B3B2006D278C /* WLActivityViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C9ABAA4E1AB8B3B2006D278C /* AppDelegate.h */,
-				C9ABAA4F1AB8B3B2006D278C /* AppDelegate.m */,
-				C9ABAA511AB8B3B2006D278C /* ViewController.h */,
-				C9ABAA521AB8B3B2006D278C /* ViewController.m */,
-				C9ABAA541AB8B3B2006D278C /* Main.storyboard */,
-				C9ABAA571AB8B3B2006D278C /* Images.xcassets */,
-				C9ABAA591AB8B3B2006D278C /* LaunchScreen.xib */,
-				C9ABAA4A1AB8B3B2006D278C /* Supporting Files */,
+				C9ABAA711AB8B3DC006D278C /* WLActivityViewController.h */,
+				C9ABAA721AB8B3DC006D278C /* WLActivityViewController.m */,
 			);
 			path = WLActivityViewController;
 			sourceTree = "<group>";
@@ -102,21 +75,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C9ABAA631AB8B3B2006D278C /* WLActivityViewControllerTests */ = {
+		C9ABAA701AB8B3BC006D278C /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				C9ABAA661AB8B3B2006D278C /* WLActivityViewControllerTests.m */,
-				C9ABAA641AB8B3B2006D278C /* Supporting Files */,
+				C9ABAA4E1AB8B3B2006D278C /* AppDelegate.h */,
+				C9ABAA4F1AB8B3B2006D278C /* AppDelegate.m */,
+				C9ABAA511AB8B3B2006D278C /* ViewController.h */,
+				C9ABAA521AB8B3B2006D278C /* ViewController.m */,
+				C9ABAA571AB8B3B2006D278C /* Images.xcassets */,
+				C9ABAA591AB8B3B2006D278C /* LaunchScreen.xib */,
+				C9ABAA4A1AB8B3B2006D278C /* Supporting Files */,
 			);
-			path = WLActivityViewControllerTests;
-			sourceTree = "<group>";
-		};
-		C9ABAA641AB8B3B2006D278C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C9ABAA651AB8B3B2006D278C /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = Demo;
+			path = WLActivityViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,24 +110,6 @@
 			productReference = C9ABAA471AB8B3B2006D278C /* WLActivityViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C9ABAA5F1AB8B3B2006D278C /* WLActivityViewControllerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9ABAA6D1AB8B3B2006D278C /* Build configuration list for PBXNativeTarget "WLActivityViewControllerTests" */;
-			buildPhases = (
-				C9ABAA5C1AB8B3B2006D278C /* Sources */,
-				C9ABAA5D1AB8B3B2006D278C /* Frameworks */,
-				C9ABAA5E1AB8B3B2006D278C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C9ABAA621AB8B3B2006D278C /* PBXTargetDependency */,
-			);
-			name = WLActivityViewControllerTests;
-			productName = WLActivityViewControllerTests;
-			productReference = C9ABAA601AB8B3B2006D278C /* WLActivityViewControllerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +121,6 @@
 				TargetAttributes = {
 					C9ABAA461AB8B3B2006D278C = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					C9ABAA5F1AB8B3B2006D278C = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = C9ABAA461AB8B3B2006D278C;
 					};
 				};
 			};
@@ -189,7 +138,6 @@
 			projectRoot = "";
 			targets = (
 				C9ABAA461AB8B3B2006D278C /* WLActivityViewController */,
-				C9ABAA5F1AB8B3B2006D278C /* WLActivityViewControllerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,16 +147,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9ABAA561AB8B3B2006D278C /* Main.storyboard in Resources */,
 				C9ABAA5B1AB8B3B2006D278C /* LaunchScreen.xib in Resources */,
 				C9ABAA581AB8B3B2006D278C /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9ABAA5E1AB8B3B2006D278C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,45 +159,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9ABAA731AB8B3DC006D278C /* WLActivityViewController.m in Sources */,
 				C9ABAA531AB8B3B2006D278C /* ViewController.m in Sources */,
 				C9ABAA501AB8B3B2006D278C /* AppDelegate.m in Sources */,
 				C9ABAA4D1AB8B3B2006D278C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9ABAA5C1AB8B3B2006D278C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9ABAA671AB8B3B2006D278C /* WLActivityViewControllerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		C9ABAA621AB8B3B2006D278C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9ABAA461AB8B3B2006D278C /* WLActivityViewController */;
-			targetProxy = C9ABAA611AB8B3B2006D278C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		C9ABAA541AB8B3B2006D278C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9ABAA551AB8B3B2006D278C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C9ABAA591AB8B3B2006D278C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C9ABAA5A1AB8B3B2006D278C /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ../Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -297,7 +215,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -332,7 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -343,9 +261,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = WLActivityViewController/Info.plist;
+				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -353,43 +272,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = WLActivityViewController/Info.plist;
+				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		C9ABAA6E1AB8B3B2006D278C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = WLActivityViewControllerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WLActivityViewController.app/WLActivityViewController";
-			};
-			name = Debug;
-		};
-		C9ABAA6F1AB8B3B2006D278C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = WLActivityViewControllerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WLActivityViewController.app/WLActivityViewController";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -412,14 +298,7 @@
 				C9ABAA6C1AB8B3B2006D278C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		C9ABAA6D1AB8B3B2006D278C /* Build configuration list for PBXNativeTarget "WLActivityViewControllerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9ABAA6E1AB8B3B2006D278C /* Debug */,
-				C9ABAA6F1AB8B3B2006D278C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

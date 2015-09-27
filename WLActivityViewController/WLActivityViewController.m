@@ -27,9 +27,11 @@
 
 @interface ActivityViewControllerTitleView : UIView {
     UILabel *_label;
+    CAShapeLayer *_mask;
 }
 
 @property(nonatomic, copy) NSString *title;
+@property(nonatomic, assign) CGFloat cornerRadius;
 
 @end
 
@@ -39,6 +41,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.layer.masksToBounds = YES;
+        _mask = [CAShapeLayer new];
+        self.layer.mask = _mask;
         
         UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
         effectView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -74,6 +78,28 @@
     size.width += 2 * 10;
     size.height += 2 * 10;
     return size;
+}
+
+- (void)setBounds:(CGRect)bounds {
+    [super setBounds:bounds];
+    NSString *referenceAnimationKey = self.layer.animationKeys.firstObject;
+    if (referenceAnimationKey != nil) {
+        [CATransaction begin];
+        CAAnimation *referenceAnimation = [self.layer animationForKey:referenceAnimationKey];
+        CABasicAnimation *maskAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
+        maskAnimation.fromValue = (__bridge id _Nullable)(_mask.path);
+        maskAnimation.duration = referenceAnimation.duration;
+        maskAnimation.timingFunction = referenceAnimation.timingFunction;
+        [_mask addAnimation:maskAnimation forKey:@"path"];
+        [CATransaction commit];
+    }
+    _mask.path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:_cornerRadius].CGPath;
+}
+
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+    _cornerRadius = cornerRadius;
+    self.layer.cornerRadius = _cornerRadius;
+    _mask.path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:_cornerRadius].CGPath;
 }
 
 @end
@@ -144,9 +170,9 @@
     UIView *contentView = containerView.subviews.lastObject;
     _titleView = [[ActivityViewControllerTitleView alloc] initWithFrame:contentView.bounds];
     if (popoverView != nil) {
-        _titleView.layer.cornerRadius = 11;
+        _titleView.cornerRadius = 11;
     } else {
-        _titleView.layer.cornerRadius = 4;
+        _titleView.cornerRadius = 4;
     }
     _titleView.title = self.title;
     _titleView.translatesAutoresizingMaskIntoConstraints = NO;

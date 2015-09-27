@@ -51,7 +51,7 @@
         _label = [UILabel new];
         _label.font = [UIFont systemFontOfSize:13];
         _label.textAlignment = NSTextAlignmentCenter;
-        _label.textColor = [UIColor colorWithWhite:0.4 alpha:1];
+        _label.textColor = [UIColor colorWithWhite:0.56 alpha:1];
         _label.numberOfLines = 2;
         _label.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_label];
@@ -59,8 +59,8 @@
         NSDictionary *viewDict = NSDictionaryOfVariableBindings(effectView, _label);
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[effectView]|" options:kNilOptions metrics:nil views:viewDict]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[effectView]|" options:kNilOptions metrics:nil views:viewDict]];
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-10-[_label]-10-|" options:kNilOptions metrics:nil views:viewDict]];
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[_label]-10-|" options:kNilOptions metrics:nil views:viewDict]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-16-[_label]-16-|" options:kNilOptions metrics:nil views:viewDict]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-14-[_label]-14-|" options:kNilOptions metrics:nil views:viewDict]];
     }
     return self;
 }
@@ -169,10 +169,17 @@
     }
     UIView *contentView = containerView.subviews.lastObject;
     _titleView = [[ActivityViewControllerTitleView alloc] initWithFrame:contentView.bounds];
-    if (popoverView != nil) {
+    if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){.majorVersion = 9}]) {
         _titleView.cornerRadius = 11;
+        if (popoverView == nil) {
+            _titleView.backgroundColor = [UIColor whiteColor];
+        }
     } else {
-        _titleView.cornerRadius = 4;
+        if (popoverView != nil) {
+            _titleView.cornerRadius = 11;
+        } else {
+            _titleView.cornerRadius = 4;
+        }
     }
     _titleView.title = self.title;
     _titleView.translatesAutoresizingMaskIntoConstraints = NO;

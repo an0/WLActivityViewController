@@ -183,18 +183,36 @@
     }
     _titleView.title = self.title;
     _titleView.translatesAutoresizingMaskIntoConstraints = NO;
-    [containerView addSubview:_titleView];
+    if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){.majorVersion = 10}]) {
+        [((UICollectionView*) contentView) setContentInset:UIEdgeInsetsMake(50, 0, 0, 0)];
+        [contentView addSubview:_titleView];
+    }
+    else
+    {
+        [containerView addSubview:_titleView];
+    }
     NSDictionary *viewDict = NSDictionaryOfVariableBindings(_titleView, contentView);
     [containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_titleView]|" options:kNilOptions metrics:nil views:viewDict]];
     if (self.popoverPresentationController != nil && self.popoverPresentationController.arrowDirection == UIPopoverArrowDirectionUp) {
-        [containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[contentView]-[_titleView]" options:kNilOptions metrics:nil views:viewDict]];
+        if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){.majorVersion = 10}])
+            [contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[contentView]-[_titleView]" options:kNilOptions metrics:nil views:viewDict]];
+        else
+            [containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[contentView]-[_titleView]" options:kNilOptions metrics:nil views:viewDict]];
     } else {
-        [containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_titleView]-[contentView]" options:kNilOptions metrics:nil views:viewDict]];
+        if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){.majorVersion = 10}])
+            [contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_titleView]-[contentView]" options:kNilOptions metrics:nil views:viewDict]];
+        else
+            [containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_titleView]-[contentView]" options:kNilOptions metrics:nil views:viewDict]];
     }
-    [containerView addConstraint:[NSLayoutConstraint constraintWithItem:_titleView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:contentView attribute:NSLayoutAttributeWidth multiplier:1 constant:0]];
-    [transitionView addConstraint:[NSLayoutConstraint constraintWithItem:_titleView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:transitionView attribute:NSLayoutAttributeTop multiplier:1 constant:20]];
-    [transitionView addConstraint:[NSLayoutConstraint constraintWithItem:_titleView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationLessThanOrEqual toItem:transitionView attribute:NSLayoutAttributeBottom multiplier:1 constant:-20]];
-    
+    if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){.majorVersion = 10}])
+        [contentView addConstraint:[NSLayoutConstraint constraintWithItem:_titleView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:contentView attribute:NSLayoutAttributeWidth multiplier:1 constant:0]];
+    else
+        [containerView addConstraint:[NSLayoutConstraint constraintWithItem:_titleView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:contentView attribute:NSLayoutAttributeWidth multiplier:1 constant:0]];
+    if (![[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){.majorVersion = 10}])
+    {
+        [transitionView addConstraint:[NSLayoutConstraint constraintWithItem:_titleView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:transitionView attribute:NSLayoutAttributeTop multiplier:1 constant:20]];
+        [transitionView addConstraint:[NSLayoutConstraint constraintWithItem:_titleView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationLessThanOrEqual toItem:transitionView attribute:NSLayoutAttributeBottom multiplier:1 constant:-20]];
+    }
     if (animated) {
         _titleView.alpha = 0;
         [UIView animateWithDuration:0.3 animations:^{
@@ -207,6 +225,8 @@
 }
 
 - (void)hideTitleView:(BOOL)animated {
+    if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){.majorVersion = 10}])
+        [((UICollectionView*)_titleView.superview) setContentInset:UIEdgeInsetsZero];
     [_titleView removeFromSuperview];
     _titleView = nil;
     

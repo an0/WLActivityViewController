@@ -184,7 +184,7 @@
     _titleView.title = self.title;
     _titleView.translatesAutoresizingMaskIntoConstraints = NO;
     if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){.majorVersion = 10}]) {
-        [contentView setContentInset:UIEdgeInsetsMake(50, 0, 0, 0)];
+        [((UICollectionView*) contentView) setContentInset:UIEdgeInsetsMake(50, 0, 0, 0)];
         [contentView addSubview:_titleView];
     }
     else
